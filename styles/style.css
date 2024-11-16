@@ -172,10 +172,6 @@ ol {
   white-space: nowrap;
 }
 
-.search-form {
-  display: flex;
-}
-
 .search-form__fieldset-title {
   padding-bottom: 5px;
 }
@@ -194,6 +190,7 @@ ol {
   border-left: transparent;
   border-right: transparent;
   font-family: "Fira Sans Condensed", sans-serif;
+  min-width: 225px;
 }
 
 .search-form__textfield:active {
