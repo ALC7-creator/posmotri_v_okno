@@ -16,6 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -215,11 +218,15 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
   border: 1px solid white;
   width: 19px;
   height: 19px;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .search-form__checkbox-list {
   display: flex;
@@ -269,13 +276,14 @@ ol {
 }
 
 .search-form__checkbox[type="checkbox"]:checked
-  + .search-form__pseudo-checkbox {
+  + span::after, .search-form__pseudo-checkbox:active::after {
+  content: '';
   width: 15px;
   height: 15px;
   color: white;
   background-color: white;
-  outline: 1px solid white;
-  outline-offset: 1px;
+  display: flex;
+ 
 }
 
 .search-form__checkbox-list > .search-form__label:has(:focus-visible){
