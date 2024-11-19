@@ -62,7 +62,6 @@ ol {
   flex-direction: column;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
 }
 
 .content__video-card {
@@ -76,18 +75,22 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .content__video-card-description-container {
   width: 100%;
-  max-width: 200px;
+  overflow: hidden;
 }
 
 .content__list-item {
   display: flex;
   flex-direction: column;
-  padding-bottom:  32px;
-  min-width: 399px;
+  padding-bottom:  30px;
+}
+
+.content__list-item:last-child{
+  padding-bottom: 0;
 }
 
 .content__details {
@@ -162,6 +165,7 @@ ol {
   text-overflow: ellipsis; 
   white-space: nowrap; 
   overflow: hidden;
+  padding-top: 2px;
 }
 
 .content__video-card-description {
@@ -263,7 +267,7 @@ ol {
 }
 
 .more-button {
-  width: 100%;
+ width: 100%;
   min-height: 34px;
 }
 
